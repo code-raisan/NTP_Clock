@@ -45,6 +45,6 @@ jobs:
         with:
           name: ${{ runner.os }} Build
           path: |
-            build/*.exe
-            build/*.bin
-            build/*.app/**/*
+            *.exe
+            *.bin
+            *.app
