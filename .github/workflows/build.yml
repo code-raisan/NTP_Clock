@@ -32,7 +32,7 @@ jobs:
         run: |
           poetry install --no-interaction
 
-      - Name: Build
+      - name: Build
         run: |
           nuitka --standalone --onefile --follow-imports --enable-plugin=tk-inter --windows-disable-console --assume-yes-for-downloads src/main.py
 
