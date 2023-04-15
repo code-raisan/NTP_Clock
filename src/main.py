@@ -4,7 +4,7 @@ import threading
 import customtkinter as ctk
 from ntp import NTPClient
 
-VERSION = "v1.0.0"
+VERSION = "v1.0.1"
 FONT_TYPE = "meiryo"
 env = {"ntp": "ntp.nict.jp"}
 

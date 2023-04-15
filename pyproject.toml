@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ntp_clock"
-version = "1.0.0"
+version = "1.0.1"
 description = ""
 authors = ["code-raisan <yuri@rainyan.net>"]
 license = "MIT"
