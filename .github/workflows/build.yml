@@ -28,6 +28,10 @@ jobs:
         run: |
           pip install poetry
 
+      - name: Install Nuitka
+        run: |
+          pip install nuitka
+
       - name: Install Dependencies
         run: |
           poetry install --no-interaction
