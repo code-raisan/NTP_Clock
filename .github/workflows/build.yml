@@ -27,14 +27,18 @@ jobs:
       - name: Install Poetry
         run: |
           pip install poetry
+          
+      - name: Install Dependencies
+        run: |
+          poetry install --no-interaction
+          
+      - name: Active venv
+        run: |
+           ./.venv/Scripts/activate
 
       - name: Install Nuitka
         run: |
           pip install nuitka
-
-      - name: Install Dependencies
-        run: |
-          poetry install --no-interaction
 
       - name: Build
         run: |
