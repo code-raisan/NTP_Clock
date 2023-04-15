@@ -27,7 +27,7 @@ jobs:
       - name: Install Poetry
         run: |
           pip install poetry
-          
+
       - name: Install Dependencies
         run: |
           poetry install --no-interaction
@@ -38,13 +38,12 @@ jobs:
 
       - name: Build
         run: |
-          poetry run python -m nuitka --standalone --onefile --follow-imports --enable-plugin=tk-inter --windows-disable-console --assume-yes-for-downloads src/main.py
+          poetry run python -m nuitka --standalone --onefile --follow-imports --enable-plugin=tk-inter --windows-disable-console --output-dir=dist -o ntpclock --assume-yes-for-downloads src/main.py
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }} Build
           path: |
-            *.exe
-            *.bin
-            *.app
+            dist/*.exe
+            dist/*.bin
